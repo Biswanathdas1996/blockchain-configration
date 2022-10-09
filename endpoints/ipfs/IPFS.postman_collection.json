@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "9af681d0-0fbd-416e-b60f-a65ff9012cb6",
+		"name": "IPFS",
+		"description": "# IPFS\n\nSend base64 encoded data on the payload of insert API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get data from IPFS",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://sosal.in/endpoints/ipfs/fetch-ipfs.php?id=34",
+					"protocol": "http",
+					"host": [
+						"sosal",
+						"in"
+					],
+					"path": [
+						"endpoints",
+						"ipfs",
+						"fetch-ipfs.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "34"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert data to IPFS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{ \"name\":\"XZY\", \"age\":12}",
+							"type": "default"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://sosal.in/endpoints/ipfs/add-Ipfs.php",
+					"protocol": "http",
+					"host": [
+						"sosal",
+						"in"
+					],
+					"path": [
+						"endpoints",
+						"ipfs",
+						"add-Ipfs.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
